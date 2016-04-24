@@ -1,0 +1,138 @@
+%
+%==> Section: Putting labels in pictures
+%
+\section{
+  Putting labels in pictures
+}
+
+\begin{frame}[fragile]
+  \frametitle{
+    Putting labels in pictures
+}
+
+  When you construct a picture, in 99\% of cases you also need to put labels. This is easy! Let us start by seeing how we would place some text in a picture.
+
+  \lstinputlisting{./tex/src/put_text_in_pictures.tex}
+  
+  yields
+
+  \begin{center}
+    \input{./tex/src/put_text_in_pictures.tex}
+  \end{center}
+
+ Notice how the ``yes" is positioned: the center of its ``baseline" is at $(1,1).$
+
+\end{frame}
+
+%
+%==> Relative positioning 
+%
+\begin{frame}[fragile]
+  \frametitle{
+    Relative positioning
+  }
+
+  Sometimes you want a label to be situated relative to a point. Ti$k$Z has neat
+  commands for this. For instance you can write
+
+  \lstinputlisting{./tex/src/relative_positioning.tex}
+  
+  to get
+
+  \begin{center}
+    \input{./tex/src/relative_positioning.tex}
+    \end{center}
+
+\end{frame}
+
+%
+%==> More relative positioning
+%
+\begin{frame}[fragile]
+
+  You are not limited to put things below a point:
+
+  \lstinputlisting{./tex/src/more_relative_positioning.tex}
+  
+  yields
+  
+  \begin{center}
+    \input{./tex/src/more_relative_positioning.tex}
+  \end{center}
+
+\end{frame}
+%
+%==> Mix and match positioning
+%
+\begin{frame}[fragile]
+  
+  And, you can also mix and match
+
+  \lstinputlisting{./tex/src/mix_and_match_positioning.tex}
+  
+  yields
+
+  \begin{center}
+    \input{./tex/src/mix_and_match_positioning.tex}
+  \end{center}
+
+\end{frame}
+
+%
+%==> Labeling axes and points
+%
+\begin{frame}[fragile]
+  \frametitle{
+    Labeling axes and points
+  }
+
+  \lstinputlisting{./tex/src/label_axes_and_points.tex}
+  
+  gives us
+  
+  \begin{center}
+    \input{./tex/src/label_axes_and_points.tex}
+  \end{center}
+
+\end{frame}
+
+%
+%==> Supressing \node
+%
+\begin{frame}[fragile]
+
+  You can avoid some typing by mixing nodes in the middle of paths. For instance the last figure could have been written as follows:
+
+  \lstinputlisting{./tex/src/label_axes_and_points_alt.tex}
+  
+  which would have given exactly the same result. Note that the node is put after the point to which it is attached and that we suppress the $\backslash$ in
+
+  \begin{lstlisting}
+    \node
+  \end{lstlisting}
+  
+
+\end{frame}
+
+%
+%==> Fancy nodes
+%
+\begin{frame}[containsverbatim]
+  \frametitle{
+    Fancy nodes
+  }
+
+  You may want to put several lines in your ``node" (this is convenient when drawing time lines for instance). This can be done by using the standard \LaTeX\, for indicating a new line but you must tell Ti$k$Z how to align things. From
+
+  {
+    \scriptsize
+    \lstinputlisting{./tex/src/fancy_nodes.tex}
+  }
+  
+  we obtain
+
+  \begin{center}
+    \input{./tex/src/fancy_nodes.tex}
+  \end{center}
+  
+\end{frame}

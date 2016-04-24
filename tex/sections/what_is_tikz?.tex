@@ -1,0 +1,90 @@
+%
+%==> Section 1: What is TikZ?
+%
+\section{
+  What is Ti$k$Z?
+}
+
+%
+%==> What is TikZ
+%
+\begin{frame}
+  \frametitle{
+    What is Ti$k$Z?
+  }
+  \begin{enumerate}
+  \item
+    A recursive acronym for \textcolor{blue}{ \tt Ti$k$Z ist kein Zeichenprogramm} (German for ``Ti$k$Z is not a drawing program").
+  \item
+    More specifically, Ti$k$Z is a package for creating pictures.
+  \item
+    Create anything from rectangles, circles to Koch snowflakes, 3D graphs and animations.
+  \item
+    Ti$k$Z works very well with Beamer (they were written by the same person!). Muck thanks and gratitude to Till Tantau.
+  \end{enumerate}
+
+\end{frame}
+
+%
+%==> An image by Ben Cot\'e
+%
+\begin{frame} 
+  \frametitle{
+    An image by Ben Cot\'e
+}
+  
+  {
+    \tiny
+    \begin{center}
+      \input{./tex/src/image_by_ben.tex}
+    \end{center}
+  }
+  
+
+\end{frame}
+
+%
+%==> Ben Cot\'e's source code
+%
+\begin{frame}[fragile]
+  \frametitle{
+    Ben Cot\'e's source code
+  }
+
+  {
+    \tiny
+    \lstinputlisting{./tex/src/image_by_ben.tex}
+  }
+  
+\end{frame}
+
+%
+%==> Preliminaries
+%
+\begin{frame}[fragile]
+  \frametitle{
+    Preliminaries
+  }
+
+  \begin{enumerate}
+  \item
+    You need to add
+
+    \begin{lstlisting}
+      \usepackage{tikz}
+    \end{lstlisting}
+
+    to your document preamble. Other commands to put in preamble will be discussed later.
+  \item
+    When creating a picture use the {\tt tikzpicture} environment. E.g.
+
+  \begin{lstlisting}
+    \begin{tikzpicture}
+      %
+      %... code
+      %
+    \end{tikzpicture}
+  \end{lstlisting}
+  \end{enumerate}
+
+\end{frame}

@@ -1,0 +1,56 @@
+%
+%==> Standard packages
+%
+\usepackage{hyperref, amsmath, amssymb, mathtools, hyperref, mathrsfs, enumerate}
+
+%
+%==> Graphics support
+%
+\usepackage{tikz}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{decorations.fractals}
+
+%
+%==> Custom commands
+\newcommand{\w}{\omega}
+\newcommand{\ow}{\overline{\omega}}
+
+%
+%==> Theme support
+%
+\usepackage{helvet}
+\definecolor{links}{HTML}{2A1B81}
+\hypersetup{colorlinks,linkcolor=,urlcolor=links}
+\mode<presentation>{
+	\usetheme{Pittsburgh}
+	\usecolortheme{seagull}
+	}
+% Set all frame titles to bold faec
+\setbeamerfont{frametitle}{series=\bfseries}
+% Set default section counter to 0
+%\setcounter{section}{-1}
+
+%
+%==> Code support
+%
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage{listings,algorithm,algorithmic}
+\colorlet{verylightgray}{lightgray!10}
+
+%
+%==> LaTeX syntax highlighting + custom tikz library keywords
+%
+\lstset{
+        language={[LaTeX]TeX},
+        basicstyle=\ttfamily,
+        texcsstyle={*\color{purple}\bfseries},
+        keywordstyle=[1]\color{blue},
+        keywordstyle=[2]\color{violet}, % Different colors for external functions
+        moretexcs={draw, node, filldraw, foreach, x, usetikzlibrary},
+        morekeywords={tikzpicture, tikz, backgrounds, decorations, fractals, grid, plot, at, to, circle, rectangle, arc, domain}, % External packages
+        keywords=[2]{factorial, sqrt, pow, exp, ln, background, log10, log2, mod, floor, round, abs, ceil, sin, cos, tan, min, max, e, pi},
+        backgroundcolor=\color{verylightgray},
+        commentstyle=\color{gray},
+        mathescape=false
+}
